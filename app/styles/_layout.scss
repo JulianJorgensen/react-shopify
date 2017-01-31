@@ -1,0 +1,10 @@
+.site-side-nav-active{
+  margin-left: rem-calc(200);
+  @include transition(margin-left 0.2s);
+}
+
+.section{
+  background-color: $grey90;
+  padding: rem-calc(30) 0;
+  text-align: center;
+}

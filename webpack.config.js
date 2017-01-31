@@ -22,6 +22,12 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/api',
+      './app/components',
+      './app/vendor'
+    ],
     alias: {
       applicationStyles: 'app/styles/app.scss'
     },
@@ -29,6 +35,10 @@ module.exports = {
   },
   module: {
     loaders: [
+      {
+        test: /\.json$/,
+        loader: 'json'
+      },
       {
         loader: 'babel-loader',
         query: {

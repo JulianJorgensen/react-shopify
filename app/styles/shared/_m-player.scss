@@ -1,0 +1,11 @@
+#player-wrapper{
+  @include transition(opacity 0.5s);
+
+  #player{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

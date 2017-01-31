@@ -1,0 +1,45 @@
+.section-landing{
+  @include flex();
+  @include flex-align(center, middle);
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.newsletter-signup{
+  @include flex();
+  @include flex-align(center, middle);
+  flex-direction: column;
+  max-width: 100%;
+  padding: rem-calc(15);
+  text-align: center;
+  @include breakpoint(medium){
+    text-align: inherit;
+  }
+  .landing-signup-form{
+    padding: 0;
+    display: block;
+    margin-top: rem-calc(15);
+
+    @include breakpoint(medium){
+      width: rem-calc(500);
+
+      .newsletter-signup-form-join{
+        text-align: right;
+      }
+    }
+  }
+}
+.newsletter-confirmation{
+  display: none;
+  text-align: center;
+}
+
+// watch now
+#player-watch{
+  margin-top: rem-calc(25);
+  .fa-play-circle{
+    position: relative;
+    bottom: -2px;
+  }
+}
