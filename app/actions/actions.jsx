@@ -32,8 +32,7 @@ export var createPlayer = (player) => {
   };
 };
 
-export var startPlayVideo = (player) => {
-  player.playVideo();
+export var startPlayVideo = () => {
   return {
     type: 'START_PLAY_VIDEO'
   };

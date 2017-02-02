@@ -23,7 +23,7 @@ export var navReducer = (state = {showClose: false, showNav: false}, action) => 
   }
 };
 
-export var videoReducer = (state = {}, action) => {
+export var videoReducer = (state = {playVideo: false, loadingVideo: false}, action) => {
   switch (action.type) {
     case 'CREATE_PLAYER':
       return {

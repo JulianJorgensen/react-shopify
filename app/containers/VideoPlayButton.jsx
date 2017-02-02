@@ -12,7 +12,7 @@ class VideoPlayButton extends React.Component{
 
     return (
       <div id={id} className="button large" onClick={()=>{
-          dispatch(actions.startPlayVideo(video.player));
+          dispatch(actions.startPlayVideo());
         }}>
         <span className="watch">watch</span> <i className={video.loadingVideo ? 'fa fa-spinner fa-pulse fa-fw' : 'fa fa-play-circle'}></i>
       </div>
