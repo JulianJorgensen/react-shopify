@@ -14,50 +14,50 @@ class Newsletter extends React.Component{
   }
 
   componentDidMount(){
-    this.abide = new Foundation.Abide($('#newsletter-signup-form'), { liveValidate: false });
+    // this.abide = new Foundation.Abide($('#newsletter-signup-form'), { liveValidate: false });
   }
 
   handleSubmit(e) {
     e.preventDefault();
 
     if (this.email.value.length > 0){
-      this.form = $('#newsletter-signup-form');
-      this.form.on('formvalid.zf.abide', () => {
-        var data = {
-          EMAIL: this.email.value
-        }
-
-        $.ajax({
-          type: 'POST',
-          url: '//koichihealing.us8.list-manage.com/subscribe/post-json?u=c616a68c09aae3ea3e536552e&amp;id=7c8bb23449&c=?',
-          data: data,
-          dataType: 'jsonp',
-          contentType: "application/json; charset=utf-8"
-        })
-        .done((data) => {
-          if (data['result'] != "success") {
-            // error
-            console.log(data);
-            this.setState({
-              subscribeSuccess: false,
-              subscribeError: data['msg'].substring(4)
-            });
-          } else {
-            // success
-            this.setState({
-              subscribeSuccess: true,
-              subscribeError: false
-            });
-          }
-        })
-        .fail(function(jqXhr) {
-          this.setState({
-            subscribeSuccess: false,
-            subscribeError: 'An error occured. Please contact <a href="mailto: me@julianjorgensen.com">Julian</a> if the issue persists.'
-          });
-          console.log('failed to register', jqXhr);
-        });
-      });
+      // this.form = $('#newsletter-signup-form');
+      // this.form.on('formvalid.zf.abide', () => {
+      //   var data = {
+      //     EMAIL: this.email.value
+      //   }
+      //
+      //   $.ajax({
+      //     type: 'POST',
+      //     url: '//koichihealing.us8.list-manage.com/subscribe/post-json?u=c616a68c09aae3ea3e536552e&amp;id=7c8bb23449&c=?',
+      //     data: data,
+      //     dataType: 'jsonp',
+      //     contentType: "application/json; charset=utf-8"
+      //   })
+      //   .done((data) => {
+      //     if (data['result'] != "success") {
+      //       // error
+      //       console.log(data);
+      //       this.setState({
+      //         subscribeSuccess: false,
+      //         subscribeError: data['msg'].substring(4)
+      //       });
+      //     } else {
+      //       // success
+      //       this.setState({
+      //         subscribeSuccess: true,
+      //         subscribeError: false
+      //       });
+      //     }
+      //   })
+      //   .fail(function(jqXhr) {
+      //     this.setState({
+      //       subscribeSuccess: false,
+      //       subscribeError: 'An error occured. Please contact <a href="mailto: me@julianjorgensen.com">Julian</a> if the issue persists.'
+      //     });
+      //     console.log('failed to register', jqXhr);
+      //   });
+      // });
     }else{
       this.setState({
         subscribeError: "Please enter a valid email"

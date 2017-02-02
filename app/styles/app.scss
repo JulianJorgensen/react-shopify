@@ -1,9 +1,7 @@
 @import "base/variables";
 
 // foundation
-@import "base/foundation-settings";
-@import "foundation";
-@include foundation-everything;
+@import "base/foundation-modules";
 
 // Components
 @import "shared/mixins";

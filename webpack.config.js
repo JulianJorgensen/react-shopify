@@ -1,28 +1,14 @@
 var webpack = require('webpack');
 var path = require('path');
+var StatsPlugin = require('stats-webpack-plugin');
 
 module.exports = {
   entry: [
-    'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/js/foundation.min.js',
     './app/app.jsx'
   ],
-  externals: {
-    jquery: 'jQuery'
-  },
   plugins: [
-    new webpack.DefinePlugin({
-      // A common mistake is not stringifying the "production" string.
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.ProvidePlugin({
-      '$': 'jquery',
-      'jQuery': 'jquery'
+    new StatsPlugin('stats.json', {
+      chunkModules: true
     })
   ],
   output: {

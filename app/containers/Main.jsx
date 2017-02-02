@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from 'Header';
-import contentAPI from 'contentAPI';
+// import contentAPI from 'contentAPI';
 import DocumentMeta from 'react-document-meta';
 import myfont from 'KefaFont';
 
@@ -15,12 +15,12 @@ class Main extends React.Component{
   }
 
   componentWillMount() {
-    contentAPI.fetchEntry('6GWX6wq58skQUYGUWaggEu').then((entry) => {
-      this.setState({
-        title: entry.title,
-        content: entry.body
-      });
-    });
+    // contentAPI.fetchEntry('6GWX6wq58skQUYGUWaggEu').then((entry) => {
+    //   this.setState({
+    //     title: entry.title,
+    //     content: entry.body
+    //   });
+    // });
   }
 
   render() {

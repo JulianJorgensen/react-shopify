@@ -15,16 +15,9 @@ import router from 'app/router/';
 //   // TodoAPI.setTodos(state.todos);
 // });
 
-// var initialTodos = TodoAPI.getTodos();
-// store.dispatch(actions.addTodos(initialTodos));
-
-
-// Load foundation
-$(document).foundation();
 
 // App css
 require('style!css!sass!applicationStyles')
-
 
 ReactDOM.render(
   <Provider store={store}>
