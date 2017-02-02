@@ -40,9 +40,9 @@ class Main extends React.Component{
 
     return (
       <div>
-        {/* <DocumentMeta {...meta} /> */}
-        {/* <Header/> */}
-        {/* {this.props.children} */}
+        <DocumentMeta {...meta} />
+        <Header/>
+        {this.props.children}
       </div>
     );
   }
