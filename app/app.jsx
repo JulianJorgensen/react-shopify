@@ -8,12 +8,12 @@ let store = require('configureStore').configure();
 import router from 'app/router/';
 
 // subscribe to the redux store
-store.subscribe(() => {
-  let state = store.getState();
-  console.log('New state', state);
-
-  // TodoAPI.setTodos(state.todos);
-});
+// store.subscribe(() => {
+//   let state = store.getState();
+//   console.log('New state', state);
+//
+//   // TodoAPI.setTodos(state.todos);
+// });
 
 // var initialTodos = TodoAPI.getTodos();
 // store.dispatch(actions.addTodos(initialTodos));
