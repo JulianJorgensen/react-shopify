@@ -13,12 +13,9 @@ app.use(function (req, res, next){
   }
 });
 
-app.use(express.static('public'));
-
-// handle every other route with index.html, which will contain
-// a script tag to your application's JavaScript file(s).
-app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('*', function(req, res) {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, function () {

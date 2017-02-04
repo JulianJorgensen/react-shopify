@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from 'Header';
-// import contentAPI from 'contentAPI';
 import DocumentMeta from 'react-document-meta';
-import myfont from 'KefaFont';
 
 class Main extends React.Component{
   constructor(props){
@@ -25,13 +23,10 @@ class Main extends React.Component{
 
   render() {
     const meta = {
-      title: 'Elevate your life through sex | ElevateSex.com',
-      description: 'Elevate the very essence of life - sex. Join Jocelyn and Julian on a tantric journey with powerful tips and insights.',
+      title: 'Rep Your City',
+      description: 'Rep Your City description',
       meta: {
-        charset: 'utf-8',
-        name: {
-          keywords: 'Sexuality, Tantra, Couples'
-        }
+        charset: 'utf-8'
       },
       auto: {
         ograph: true
